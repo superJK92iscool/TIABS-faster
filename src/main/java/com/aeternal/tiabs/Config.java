@@ -12,7 +12,7 @@ public final class Config {
         final Configuration config = new Configuration(configFile);
         try {
             config.load();
-            TIME_IN_A_BOTTLE_SECOND = config.getInt("TimeInABottlePerSecond", "Numbers", 20, 0, Integer.MAX_VALUE, "How many ticks have to pass for a Time in a Bottle to gain 1 second (20 = 1 Second)");
+            TIME_IN_A_BOTTLE_SECOND = config.getInt("TimeInABottlePerSecond", "Numbers", 1, 0, Integer.MAX_VALUE, "How many ticks have to pass for a Time in a Bottle to gain 1 second (20 = 1 Second)");
 
         } catch (Exception e) {
             Tiabs.log.fatal("Fatal error reading config file.", e);
